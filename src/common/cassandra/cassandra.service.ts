@@ -7,8 +7,8 @@ export class CassandraService {
     mapper: mapping.Mapper;
     private createClient() {
         this.client = new Client({
-            contactPoints: ['0.0.0.0'],
-            keyspace: 'employeedb',
+            contactPoints: ['localhost'],
+            keyspace: 'userdb',
             localDataCenter: 'datacenter1',
             authProvider: new auth.PlainTextAuthProvider('cassandra', 'cassandra')
         });
